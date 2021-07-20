@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .models import MailingListPerson, Show, Demo
 import os
+import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -21,8 +22,9 @@ def contact(request):
         return render(request, 'jobs/contact.html')
 
 def shows(request):
-    shows=Show.objects.order_by('-date')
-    return render(request, 'jobs/shows.html', {'shows':shows})
+    past_shows=Show.objects.exclude(date__gt=datetime.date.today()).order_by('-date')
+    shows=Show.objects.exclude(date__lte=datetime.date.today()).order_by('-date')
+    return render(request, 'jobs/shows.html', {'shows':shows, 'past_shows':past_shows})
 
 def about(request):
     return render(request, 'jobs/about.html')
