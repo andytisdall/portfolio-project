@@ -5,8 +5,14 @@ import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+
 def home(request):
     return render(request, 'jobs/home.html')
+
+
+def listen(request):
+    return render(request, 'jobs/listen.html')
+
 
 def contact(request):
     if request.method == 'POST':
@@ -15,26 +21,32 @@ def contact(request):
             person.name = request.POST['name']
             person.email = request.POST['email']
             person.save()
-            return render(request, 'jobs/contact.html', {'success':"You've been added to the Apprehenchmen mailing list!  You won't regret this."})
+            return render(request, 'jobs/contact.html', {'success': "You've been added to the Apprehenchmen mailing list!  You won't regret this."})
         else:
-            return render(request, 'jobs/contact.html', {'failure':'Enter your name and your email, beloved site user.'})
+            return render(request, 'jobs/contact.html', {'failure': 'Enter your name and your email, beloved site user.'})
     else:
         return render(request, 'jobs/contact.html')
 
+
 def shows(request):
-    past_shows=Show.objects.exclude(date__gt=datetime.date.today()).order_by('-date')
-    shows=Show.objects.exclude(date__lte=datetime.date.today()).order_by('-date')
-    return render(request, 'jobs/shows.html', {'shows':shows, 'past_shows':past_shows})
+    past_shows = Show.objects.exclude(
+        date__gt=datetime.date.today()).order_by('-date')
+    shows = Show.objects.exclude(
+        date__lte=datetime.date.today()).order_by('-date')
+    return render(request, 'jobs/shows.html', {'shows': shows, 'past_shows': past_shows})
+
 
 def about(request):
     return render(request, 'jobs/about.html')
 
+
 def harp(request):
     return render(request, 'jobs/harp.html')
 
+
 def demos(request):
-    demos=Demo.objects.order_by('-date_modified')
-    name_list=[]
+    demos = Demo.objects.order_by('-date_modified')
+    name_list = []
     for demo in demos:
         name_list.append(demo.mp3.name)
     current_files = os.listdir(path=os.path.join(BASE_DIR, 'media/demos'))
@@ -44,4 +56,4 @@ def demos(request):
     for file in fixed_current_files:
         if file not in name_list:
             os.remove(os.path.join(BASE_DIR, f'media/{file}'))
-    return render(request, 'jobs/demos.html', {'demos':demos})
+    return render(request, 'jobs/demos.html', {'demos': demos})
