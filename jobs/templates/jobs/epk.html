@@ -5,15 +5,15 @@
 <h1>Electronic Press Kit</h1>
 
 <h2 class="pt-5 pb-2 text-left"><u>Music</u></h2>
+<div class="ml-4">
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=2220113527/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
 
-<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=2220113527/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
+    <br />
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=1416561713/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
+    <br />
+    <iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=785371256/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
 
-<br />
-<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=1416561713/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
-<br />
-<iframe style="border: 0; width: 100%; height: 120px;" src="https://bandcamp.com/EmbeddedPlayer/album=3733680127/size=large/bgcol=ffffff/linkcol=7137dc/tracklist=false/artwork=small/track=785371256/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear">Dress to Disappear by Apprehenchmen</a></iframe>
-
-
+</div>
 
 <h2 class="pt-5 pb-2 text-left"><u>Photos</u></h2>
 
@@ -21,7 +21,7 @@
 
 <h2 class="pt-5 pb-2 text-left"><u>Bio</u></h2>
 
-<div class='row pt-3  text-left'>
+<div class='row pt-3 text-left ml-4'>
     <p>
         Apprehenchmen is a four-piece rock band in Oakland, CA. Andy Tisdall, veteran of Bay Area bands Little Teeth and ZOO, started playing music with his fiance because they didn't want to hire a band at their own wedding. After their marriage, the couple began to write strange little indie rock songs to entertain friends. They recruited other Oakland musicians to fill out the band, and are now releasing their second full-length album.  "Murder Eyes" is a 14 song examination of how just deep you can dive when the world has lost its mind.
     </p>
@@ -40,31 +40,33 @@
 
 <h2 class="pt-5 pb-2 text-left"><u>Links</u></h2>
 
-<div class="row pt-3">
-    <h4><a href="{% url 'home' %}">Band Website</a></h4>
-</div>
+<div class="ml-4">
 
-<div class='row pt-3'>  
-    <a href='http://instagram.com/apprehenchmen' target='_blank'>
-        <img src="https://image.flaticon.com/icons/png/512/174/174855.png" width=40px />
-    </a>
-</div>
+    <div class="row pt-3">
+        <h4><a href="{% url 'home' %}">Band Website</a></h4>
+    </div>
 
+    <div class='row pt-3'>  
+        <a href='http://instagram.com/apprehenchmen' target='_blank'>
+            <img src="https://image.flaticon.com/icons/png/512/174/174855.png" width=40px />
+        </a>
+    </div>
+</div>
 
 <h2 class="pt-5 pb-2 text-left"><u>Shows</u></h2>
-<div class="row pt-3">
-    <h4>
-        <b>August 6th, 2021</b>
-        <p>
-            <a href="{% url 'shows' %}">The Golden Bull</a>
-        </p>
-    </h4>
+<div class="ml-4">
+    <div class="row pt-3">
+        <h4>
+            <b>August 6th, 2021:   </b><a href="{% url 'shows' %}">The Golden Bull</a>
+        </h4>
+    </div>
 </div>
 
 <h2 class="pt-5 pb-2 text-left"><u>Contact</u></h2>
-
-<div class='row pt-3 pb-5'>
-    <h4><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h4>
+<div class="ml-4">
+    <div class='row pt-3 pb-5'>
+        <h4><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h4>
+    </div>
 </div>
 
 {% endblock %}
