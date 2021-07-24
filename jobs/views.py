@@ -14,6 +14,10 @@ def listen(request):
     return render(request, 'jobs/listen.html')
 
 
+def epk(request):
+    return render(request, 'jobs/epk.html')
+
+
 def contact(request):
     if request.method == 'POST':
         if request.POST['name'] and request.POST['email']:
