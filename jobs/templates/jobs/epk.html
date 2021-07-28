@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block content %}
-
+{% load staticfiles %}
 
 <h1>Electronic Press Kit</h1>
 
@@ -17,7 +17,23 @@
 
 <h2 class="pt-5 pb-2 text-left"><u>Photos</u></h2>
 
-
+    <div class="row">
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <img src="{% static 'home-prac.jpg' %}" />
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <img src="{% static 'andy-gtr.jpg' %}" />
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <img src="{% static 'andy-studio.jpg' %}" />
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <img src="{% static 'artshow.jpg' %}" />
+        </div>
+        <div class="col-lg-2 col-md-4 col-sm-6 col-xs-12">
+            <img src="{% static 'andy-piano.jpg' %}" />
+        </div>
+    </div>
 
 <h2 class="pt-5 pb-2 text-left"><u>Bio</u></h2>
 
