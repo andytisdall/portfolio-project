@@ -13,10 +13,11 @@ def home(request):
 def listen(request):
     return render(request, 'jobs/listen.html')
 
+def photos(request):
+    return render(request, 'jobs/photos.html')
 
 def epk(request):
     return render(request, 'jobs/epk.html')
-
 
 def contact(request):
     if request.method == 'POST':

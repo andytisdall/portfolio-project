@@ -5,8 +5,16 @@
 </div>
 <br><br>
 
-<div class='row pb-3'>
-  <h5><a href='http://instagram.com/apprehenchmen' target='_blank'>instagram</a></h5>
+<div class="ml-5">
+  <div class='row pt-3 ml-5'>
+      <h4><a href='mailto:apprehenchmen@gmail.com'>apprehenchmen@gmail.com</a></h4>
+  </div>
+</div>
+
+<div class='row pt-3 ml-5'>  
+  <a href='http://instagram.com/apprehenchmen' target='_blank'>
+      <img src="https://image.flaticon.com/icons/png/512/174/174855.png" width=40px />
+  </a>
 </div>
 <br><br>
 <div class='row justify-content-left'>
@@ -25,7 +33,7 @@
 </div>
   {% endif %}
 <br>
-<div class='row justify-content-left'>
+<div class='row justify-content-left ml-5'>
     <form method="POST" action="{% url 'contact' %}" enctype="multipart/form-data">
 
     {% csrf_token %}

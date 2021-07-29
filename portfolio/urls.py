@@ -30,5 +30,6 @@ urlpatterns = [
     path('harp/', jobs.views.harp, name='harp'),
     path('demos/', jobs.views.demos, name='demos'),
     path('listen/', jobs.views.listen, name='listen'),
-    path('epk/', jobs.views.epk, name='epk')
+    path('epk/', jobs.views.epk, name='epk'),
+    path('photos/', jobs.views.photos, name='photos')
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
