@@ -8,7 +8,7 @@
 {%for show in shows.all%}
 <p>
 <div class="row">
-  <div class="col-5">
+  <div class="col-5 col-sm-12">
     <div class="row text-left">
       <h2>{{ show.date }}</2>
         <br>
@@ -25,7 +25,7 @@
       <h4>with {{ show.bands }}</h4>
     </div>
   </div>
-  <div class='col-7'>
+  <div class='col-7 col-sm-12'>
     <img src='{{ show.flyer.url }}' width='100%' />
   </div>
   <br />
