@@ -10,12 +10,11 @@
 <div class="row">
   <div class="col-12 col-md-5">
     <div class="row text-left">
-      <h2>{{ show.date }}</2>
-        <br>
+      <h2>{{ show.date }}</h2>
+      <br>
     </div>
     <div class="row text-left">
       <h2><a href="{{ show.venue_url }}" target='_blank'>{{ show.venue }}</a></h2>
-      <br>
     </div>
     <div class="row text-left">
       <h4>{{ show.time }}</h4>
@@ -34,29 +33,28 @@
 </p>
 {%endfor%}
 <div class="row mb-5 mt-5">
-  <H1>PAST SHOWS</H1>
+  <h1>PAST SHOWS</h1>
 </div>
 {%for show in past_shows.all%}
 <p>
 <div class="row">
-  <div class="col-5">
+  <div class="col-12 col-md-5">
     <div class="row text-left">
-      <h2>{{ show.date }}</2>
+      <h2>{{ show.date }}</h2>
         <br>
     </div>
     <div class="row text-left">
       <h2><a href="{{ show.venue_url }}" target='_blank'>{{ show.venue }}</a></h2>
-      <br>
     </div>
     <div class="row text-left">
       <h4>{{ show.time }}</h4>
     </div>
-    <br><br>
+    <br>
     <div class="row text-left">
       <h4>with {{ show.bands }}</h4>
     </div>
   </div>
-  <div class='col-7'>
+  <div class='col-12 col-md-7'>
     <img src='{{ show.flyer.url }}' width='100%' />
   </div>
   <br />
