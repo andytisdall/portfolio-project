@@ -2,7 +2,22 @@
 {% block content %}
 {% load static %}
 
-<iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1841159518/size=small/bgcol=333333/linkcol=e99708/track=691457669/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/murder-eyes">Murder Eyes by Apprehenchmen</a></iframe>
+<div class="row">
+
+  <div class="col-7">
+
+    <iframe style="border: 0; width: 100%; height: 42px;" src="https://bandcamp.com/EmbeddedPlayer/album=1841159518/size=small/bgcol=333333/linkcol=e99708/track=691457669/transparent=true/" seamless><a href="https://apprehenchmen.bandcamp.com/album/murder-eyes">Murder Eyes by Apprehenchmen</a></iframe>
+
+  </div>
+
+  <a href="{% url 'listen' %}" target="_blank" class="justify-content-start">
+    <button type="button" class="btn btn-block btn-light border-dark">More Songs</button>
+  </a>
+
+</div>
+
+
+
 
   <div class="row pt-4">
     <h2 class="jumbotron-heading"><b>Murder Eyes is Out Now!</b></h1>
@@ -12,14 +27,14 @@
     <p class="lead text-muted">Apprehenchmen's second album has been released.  We worked hard on it and we hope it can survive out in the world.</p>
   </div>
   <div class="row">
-    <div class="col-md-7 pt-2">
+    <div class="col-md-6 pt-2">
       <a href="https://apprehenchmen.bandcamp.com/album/murder-eyes">
         <img src='{% static "murder-cover.jpg" %}' class="img-fluid" height="auto" alt="Murder Eyes cover">
       </a>
     </div>
-    <div class="ml-5 mt-3 justify-content-start">
+    <div class="col-md-3 ml-5 mt-3 justify-content-start">
       <div class="row pb-3">
-        <p class="lead text-muted">Listen/Buy the Album:</p>
+        <p class="lead text-muted">Listen/Buy Murder Eyes:</p>
       </div>
       <div class="row pb-3 ">
         <a href="https://apprehenchmen.bandcamp.com/album/murder-eyes" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Bandcamp</button></a>
@@ -43,10 +58,13 @@
           <a href="https://soundcloud.com/apprehenchmen" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Soundcloud</button></a>
       </div> -->
     </div>
+    <!-- <div class="col-md-3">
+
+    </div> -->
   </div>
   <hr>
-  <div class="row">
-    <h3><b>Listen to DRESS TO DISAPPEAR</b></h1>
+  <div class="row mt-5">
+    <h3><b>DRESS TO DISAPPEAR</b></h1>
   </div>
   <div class="row">
     <p class="lead text-muted">The first album by Apprehenchmen</p>
@@ -55,43 +73,59 @@
     <br />
   </div>
   <div class="row">
-    <div class="col-md-7">
+    <div class="col-md-6">
+
       <div class="row">
         <a href="http://apprehenchmen.bandcamp.com/album/dress-to-disappear">
           <img src='{% static "dress-cover.jpg" %}' class="img-fluid" height="auto" alt="Dress to Disappear cover">
         </a>
       </div>
-      <div class="row">
-      <br />
-      <br />
-      </div>
+
     </div>
-    <div class="mt-3 ml-5 justify-content-start">
+
+    <div class="col-md-4 mt-3 ml-5 justify-content-start">
+
       <div class="row pb-3">
-        <p class="lead text-muted">Listen/Buy the Album:</p>
+        <p class="lead text-muted">Listen/Buy Dress to Disappear:</p>
       </div>
-        <div class="row pb-3 ">
-          <a href="http://https://apprehenchmen.bandcamp.com/album/dress-to-disappear" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Bandcamp</button></a>
+
+      <div class="row">
+
+        <div class="col-5 mr-5">
+
+          <div class="row pb-3 ">
+            <a href="https://apprehenchmen.bandcamp.com/album/dress-to-disappear" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Bandcamp</button></a>
+          </div>
+
+          <div class="row pb-3">
+              <a href="https://www.youtube.com/watch?v=Jnop8HwBM5M&list=OLAK5uy_mJindE8-p0kbtWZOO0n7RhkD38YGMr8IE" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Youtube</button></a>
+          </div>
+
+          <div class="row pb-3 ">
+              <a href="https://open.spotify.com/album/59FmgQCIB8Hup6b1ngSwgU" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Spotify</button></a>
+          </div>
+
         </div>
-        <div class="row pb-3 ">
-            <a href="https://www.youtube.com/watch?v=Jnop8HwBM5M&list=OLAK5uy_mJindE8-p0kbtWZOO0n7RhkD38YGMr8IE" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Youtube</button></a>
+
+        <div class="col-5">
+
+          <div class="row pb-3">
+              <a href="https://music.apple.com/us/album/dress-to-disappear/1483708235?uo=4&app=music&at=1001lry3&ct=dashboard" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Apple Music</button></a>
+          </div>
+
+          <div class="row pb-3 ">
+              <a href="http://www.amazon.com/gp/product/B07Z5QP631/?tag=distrokid06-20" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Amazon</button></a>
+          </div>
+
+          <div class="row pb-3">
+              <a href="https://soundcloud.com/apprehenchmen" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Soundcloud</button></a>
+          </div>    
+
         </div>
-        <div class="row pb-3 ">
-            <a href="https://open.spotify.com/album/59FmgQCIB8Hup6b1ngSwgU" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Spotify</button></a>
-        </div>
-        <div class="row pb-3">
-            <a href="https://music.apple.com/us/album/dress-to-disappear/1483708235?uo=4&app=music&at=1001lry3&ct=dashboard" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Apple Music</button></a>
-        </div>
-        <div class="row pb-3 ">
-            <a href="https://music.apple.com/us/album/dress-to-disappear/1483708235?uo=4&app=itunes&at=1001lry3&ct=dashboard" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">iTunes</button></a>
-        </div>
-        <div class="row pb-3 ">
-            <a href="http://www.amazon.com/gp/product/B07Z5QP631/?tag=distrokid06-20" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Amazon</button></a>
-        </div>
-        <div class="row pb-3">
-            <a href="https://soundcloud.com/apprehenchmen" target="_blank"><button type="button" class="btn btn-lg btn-block btn-dark">Soundcloud</button></a>
-        </div>
+      </div>
     </div>
+
+
   </div>
 
 {% endblock %}
