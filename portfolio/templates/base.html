@@ -82,14 +82,14 @@
             <a class="nav-link" href="{% url 'shows' %}">Shows <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
-            <a class="nav-link" href="{% url 'photos' %}">Photos <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="{% url 'photos' %}">Video/Photo <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item active">
             <a class="nav-link" href="{% url 'about' %}">About <span class="sr-only">(current)</span></a>
           </li>
           <li class="ml-2 mt-1">
             <a href='http://instagram.com/apprehenchmen' target='_blank'>
-              <img src="https://image.flaticon.com/icons/png/512/174/174855.png" width=20px />
+              <img src="{% static 'instagram.jpg' %}" width=20px />
             </a>
           </li>
         </ul>
