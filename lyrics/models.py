@@ -24,7 +24,7 @@ class Album(models.Model):
         return self.title
 
 
-class Show(models.Model):
+class Appearance(models.Model):
     venue = models.CharField(max_length=200)
     venue_url = models.URLField()
     bands = models.CharField(max_length=200)
