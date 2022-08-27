@@ -10,7 +10,7 @@ class Show(models.Model):
     venue = models.CharField(max_length=200)
     venue_url = models.URLField()
     bands = models.CharField(max_length=200)
-    date = models.DateField(max_length=200)
+    date = models.DateField()
     time = models.TimeField()
     flyer = models.ImageField(upload_to='images/')
 
