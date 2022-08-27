@@ -26,4 +26,4 @@ def shows(request):
         date__gt=datetime.date.today()).order_by('-date')
     shows = Show.objects.exclude(
         date__lte=datetime.date.today()).order_by('-date')
-    return render(request, 'jobs/shows.html', {'shows': shows, 'past_shows': past_shows})
+    return render(request, 'lyrics/shows.html', {'shows': shows, 'past_shows': past_shows})
