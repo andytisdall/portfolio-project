@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from .models import MailingListPerson, Show
+from .models import MailingListPerson
 import os
-import datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -34,14 +33,6 @@ def contact(request):
             return render(request, 'jobs/contact.html', {'failure': 'Enter your name and your email, beloved site user.'})
     else:
         return render(request, 'jobs/contact.html')
-
-
-def shows(request):
-    past_shows = Show.objects.exclude(
-        date__gt=datetime.date.today()).order_by('-date')
-    shows = Show.objects.exclude(
-        date__lte=datetime.date.today()).order_by('-date')
-    return render(request, 'jobs/shows.html', {'shows': shows, 'past_shows': past_shows})
 
 
 def about(request):

@@ -18,6 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 import jobs.views
+import lyrics.views
 
 
 urlpatterns = [
@@ -25,10 +26,10 @@ urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('contact/', jobs.views.contact, name='contact'),
     path('lyrics/', include('lyrics.urls')),
-    path('shows/', jobs.views.shows, name='shows'),
     path('about/', jobs.views.about, name='about'),
     path('harp/', jobs.views.harp, name='harp'),
     path('listen/', jobs.views.listen, name='listen'),
     path('epk/', jobs.views.epk, name='epk'),
-    path('photos/', jobs.views.photos, name='photos')
+    path('photos/', jobs.views.photos, name='photos'),
+    path('shows/', lyrics.views.shows, name='shows'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
