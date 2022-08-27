@@ -13,11 +13,14 @@ def home(request):
 def listen(request):
     return render(request, 'jobs/listen.html')
 
+
 def photos(request):
     return render(request, 'jobs/photos.html')
 
+
 def epk(request):
     return render(request, 'jobs/epk.html')
+
 
 def contact(request):
     if request.method == 'POST':
@@ -49,16 +52,16 @@ def harp(request):
     return render(request, 'jobs/harp.html')
 
 
-def demos(request):
-    demos = Demo.objects.order_by('-date_modified')
-    name_list = []
-    for demo in demos:
-        name_list.append(demo.mp3.name)
-    current_files = os.listdir(path=os.path.join(BASE_DIR, 'media/demos'))
-    fixed_current_files = []
-    for item in current_files:
-        fixed_current_files.append('demos/' + item)
-    for file in fixed_current_files:
-        if file not in name_list:
-            os.remove(os.path.join(BASE_DIR, f'media/{file}'))
-    return render(request, 'jobs/demos.html', {'demos': demos})
+# def demos(request):
+#     demos = Demo.objects.order_by('-date_modified')
+#     name_list = []
+#     for demo in demos:
+#         name_list.append(demo.mp3.name)
+#     current_files = os.listdir(path=os.path.join(BASE_DIR, 'media/demos'))
+#     fixed_current_files = []
+#     for item in current_files:
+#         fixed_current_files.append('demos/' + item)
+#     for file in fixed_current_files:
+#         if file not in name_list:
+#             os.remove(os.path.join(BASE_DIR, f'media/{file}'))
+#     return render(request, 'jobs/demos.html', {'demos': demos})
