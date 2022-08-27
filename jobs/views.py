@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import MailingListPerson
+from .models import MailingListPerson, Show
 import os
 import datetime
 
@@ -36,12 +36,12 @@ def contact(request):
         return render(request, 'jobs/contact.html')
 
 
-# def shows(request):
-#     past_shows = Show.objects.exclude(
-#         date__gt=datetime.date.today()).order_by('-date')
-#     shows = Show.objects.exclude(
-#         date__lte=datetime.date.today()).order_by('-date')
-#     return render(request, 'jobs/shows.html', {'shows': shows, 'past_shows': past_shows})
+def shows(request):
+    past_shows = Show.objects.exclude(
+        date__gt=datetime.date.today()).order_by('-date')
+    shows = Show.objects.exclude(
+        date__lte=datetime.date.today()).order_by('-date')
+    return render(request, 'jobs/shows.html', {'shows': shows, 'past_shows': past_shows})
 
 
 def about(request):
