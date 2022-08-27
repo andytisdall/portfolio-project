@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import MailingListPerson, Show, Demo
+from django.shortcuts import render
+from .models import MailingListPerson, Show
 import os
 import datetime
 
