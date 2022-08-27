@@ -25,7 +25,7 @@ urlpatterns = [
     path('', jobs.views.home, name='home'),
     path('contact/', jobs.views.contact, name='contact'),
     path('lyrics/', include('lyrics.urls')),
-    path('shows/', jobs.views.shows, name='shows'),
+    # path('shows/', jobs.views.shows, name='shows'),
     path('about/', jobs.views.about, name='about'),
     path('harp/', jobs.views.harp, name='harp'),
     path('listen/', jobs.views.listen, name='listen'),
