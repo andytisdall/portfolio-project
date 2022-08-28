@@ -1,6 +1,6 @@
 
 from django.shortcuts import render, get_object_or_404
-from .models import Lyrics, Album
+from .models import Lyrics, Album, Show
 import datetime
 
 # Create your views here.
@@ -22,9 +22,8 @@ def detail(request, title):
 
 
 def shows(request):
-    # past_shows = Show.objects.exclude(
-    #     date__gt=datetime.date.today()).order_by('-date')
-    # shows = Show.objects.exclude(
-    #     date__lte=datetime.date.today()).order_by('-date')
-    # return render(request, 'lyrics/shows.html', {'shows': shows, 'past_shows': past_shows})
-    return 0
+    past_shows = Show.objects.exclude(
+        date__gt=datetime.date.today()).order_by('-date')
+    shows = Show.objects.exclude(
+        date__lte=datetime.date.today()).order_by('-date')
+    return render(request, 'lyrics/shows.html', {'shows': shows, 'past_shows': past_shows})
