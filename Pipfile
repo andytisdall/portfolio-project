@@ -10,7 +10,7 @@ django = "==2.2.4"
 pillow = "==8.3.2"
 psycopg2-binary = "==2.8.3"
 pytz = "==2019.2"
-sqlparse = "==0.3.0"
+sqlparse = "==0.4.4"
 
 
 [requires]
